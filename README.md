@@ -1,5 +1,6 @@
 # memoAPP
 > Full Stack Vue.js, Express & MongoDB
+
 > MongoDB connection string in server/routes/api/posts.js to your own.
 
 ## Quick Start
