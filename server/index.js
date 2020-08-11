@@ -13,6 +13,18 @@ app.use(cors())
 app.use('/api/posts', posts)
 
 
+//Handle production
+if (process.env.NODE_ENV === 'production'){
+    //static built folder
+    app.use(express.static(__dirname + '/public'))
+
+    //handle spa
+    app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'))
+}
+
+
+
+
 
 // //
 // app.use( (req, res, next) => {
